@@ -11,3 +11,43 @@
 *::after {
   box-sizing: border-box;
 }
+.no-border:focus {
+  border-color: #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+
+
+@media (min-width: 992px) {
+ 
+.no-border:valid {
+  border-color: #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+}
+
+.red{
+  background-color: red;color: white; padding: 4px 8px ; text-align: center ; border-radius: 5px}
+.blue{
+  color: rgb(148, 31, 31);         
+}
+ 
+
+.ok{color: white; padding: 4px 8px ; text-align: center ; border-radius: 5px}
+
+
+
+.cont {
+  width: 460px;
+  height: 618px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+}
+.photo{
+  height: 220px;
+  width: 100%;
+}
