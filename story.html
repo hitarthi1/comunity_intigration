@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>header</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center
+        }
+
+        .rating>input {
+            display: none
+        }
+
+        .rating>label {
+            position: relative;
+            width: 1em;
+            font-size: 30px;
+            font-weight: 300;
+            color: #757575;
+            cursor: pointer
+        }
+
+        .rating>label::before {
+            content: "\2605";
+            position: absolute;
+            opacity: 0
+        }
+
+        .rating>label:hover:before,
+        .rating>label:hover~label:before {
+            opacity: 1 !important
+        }
+
+        .rating>input:checked~label:before {
+            opacity: 1
+        }
+
+        .rating:hover>input:checked~label:before {
+            opacity: 0.4
+        }
+
+        .last-con {
+            border: 1px solid #E8E8E8;
+            border-radius: 3px;
+        }
+
+        .last-con img {
+            width: 18px;
+            height: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container mt-5">
+
+
+        <div class="main1  row">
+
+            <div class="image  col-lg-6  d-flex flex-column h-100">
+                <img src="/images/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-4.png" id="image-area" class=""
+                    style="max-width: 720px; height: 428px;" />
+                <div id="carousel-bottom" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row p-1">
+                                <div class="col-3 p-1">
+                                    <img src="/images/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-2.png"
+                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="120"
+                                        role="img" onclick="display(this)">
+                                </div>
+                                <div class="col-3 p-1">
+                                    <img src="/images/Education-Supplies-for-Every--Pair-of-Shoes-Sold.png"
+                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="120"
+                                        role="img" onclick="display(this)">
+                                </div>
+                                <div class="col-3 p-1">
+                                    <img src="/images/Grow-Trees-On-the-path-to-environment-sustainability.png"
+                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="120"
+                                        role="img" onclick="display(this)">
+                                </div>
+                                <div class="col-3 p-1">
+                                    <img src="/images/Nourish-the-Children-in--African-country.png"
+                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="120"
+                                        role="img" onclick="display(this)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row p-1">
+                                <div class="col-3 p-1">
+                                    <img src="/images/Nourish-the-Children-in--African-country.png"
+                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="175"
+                                        height="120" role="img" onclick="display(this)">
+                                </div>
+                                <div class="col-3 p-1">
+                                    <img src="/images/Plantation-and-Afforestation-programme.png"
+                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="175"
+                                        height="120" role="img" onclick="display(this)">
+                                </div>
+                                <div class="col-3 p-1">
+                                    <img src="/images/CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png"
+                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 " width="175"
+                                        height="120" role="img" onclick="display(this)">
+                                </div>
+                                <div class="col-3 p-1">
+                                    <img src="/images/Plantation-and-Afforestation-programme.png"
+                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="175"
+                                        height="120" role="img" onclick="display(this)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev w-auto ps-2 pe-2 bg-black bg-opacity-50 mt-2 mb-2"
+                        type="button" data-bs-target="#carousel-bottom" data-bs-slide="prev">
+                        <img src="/images/left1.png" aria-hidden="true" />
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next w-auto ps-2 pe-2 bg-black bg-opacity-50 mt-2 mb-2"
+                        type="button" data-bs-target="#carousel-bottom" data-bs-slide="next">
+                        <img src="/images/right-arrow2.png" aria-hidden="true" />
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <script>
+                    function display(item) {
+                        let image = document.getElementById("image-area");
+                        image.src = item.src;
+                    }
+                </script>
+            </div>
+            <div class="card border-0 col-lg-6">
+                <div class="card-body mt-3 ">
+
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column justify-content-center text-center">
+                            <img src="images\volunteer7.png" class="rounded-circle" alt="" style="height: 80%;">
+                            <div class="">Andrew Jonhnson</div>
+                        </div>
+                        <div class="align-self-end border p-2 rounded-pill">12,000 Views</div>
+                    </div>
+
+                    <p class="light-gray" style="font-size:15px">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing
+                        elit, sed do eiusmod temp bvhjgfjhb or incididunt ut labore...</p>
+
+
+
+
+
+
+                    <div class="d-flex flex-wrap">
+
+                        <button
+                            class=" btn btn-outline-secondary rounded-pill border me-2 ps-3 pe-3 btn bg-transperent flex-fill"><i
+                                class="fa fa-square px-2"></i>Recommend
+                            to a Co-Worker</button>
+                        <button type="submit" value="Apply"
+                            class="btn btn-outline-orange rounded-pill ps-3 pe-3 fw-bold flex-fill" style="  border-color: #ff9800;
+                            color: orange;">Open Mission
+                            <img src="/images/right-arrow.png" class="ms-2" />
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container mt-4 card border-0">
+
+
+            <ul class="nav nav-tabs card-title ">
+                <li class="nav-item">
+                    <div class="nav-link active text-decoration-none border-0 ps-0"
+                        style="border-bottom: 1px solid #414141!important; font-size: 22px;" data-bs-toggle="tab"
+                        href="#msg">Mission
+                    </div>
+                </li>
+
+            </ul>
+
+
+
+
+            <div class="tab-content">
+                <div class="tab-pane container active " id="msg">
+
+                    <h5 class="py-3" style="font-size: 25px;">Introduction</h5>
+                    <p class="m-2" style="font-size: 15px; display: inline-block;">Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.<br><br> Duis aute irure dolor in reprehenderit in voluptate velit
+                        esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est
+                        laborum.<br><br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                        officia deserunt mollit anim id est laborum.</p>
+
+                    <h5 class="py-3" style="font-size: 25px;">Challenge</h5>
+                    <p style="font-size: 15px; ">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum. <br><br>Lorem ipsum dolor sit amet, consectetur
+                        adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>

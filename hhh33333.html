@@ -94,9 +94,9 @@
 
                 <div class="final">
                     <div class="card">
-                        <div class="card">
+                        <div class="card height">
                             <img src="images/CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png"
-                                class="card-img-top" alt="...">
+                                class="card-img-top height" alt="...">
                             <div class="card-img-overlay">
                                 <div
                                     class="d-flex features-like-location flex-column align-items-end h-100 justify-content-between">
@@ -202,6 +202,7 @@
                 </div>
 
             </div>
+
             <div class=" border card  final thumbnail">
 
 
@@ -315,14 +316,15 @@
                 </div>
 
             </div>
+
             <div class=" border card  final thumbnail">
 
 
                 <div class="final">
                     <div class="card">
-                        <div class="card">
+                        <div class="card height">
                             <img src="images/CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png"
-                                class="card-img-top" alt="...">
+                                class="card-img-top height" alt="...">
                             <div class="card-img-overlay">
                                 <div
                                     class="d-flex features-like-location flex-column align-items-end h-100 justify-content-between">
@@ -432,7 +434,6 @@
 
 
 
-
         </div>
     </div>
 
@@ -477,7 +478,30 @@
                 });
             });
         }
-        fetchProduct();</script>
+        fetchProduct();
+        
+        function responsive(maxWidth) {
+  if (maxWidth.matches && $( ".final" ).hasClass("final2")) { 
+    
+    $(".final").removeClass("final2");
+    $(".adu").removeClass("adu2");
+    $(".gayab").removeClass("gayab2");
+    console.log("called called")
+    
+  } if(!maxWidth.matches && $( ".list_view" ).hasClass("active")){  console.log("called2 called")
+    $(".final").addClass("final2");
+    $(".adu").addClass("adu2");
+    $(".gayab").addClass("gayab2");
+    
+    
+    }
+    
+}
+
+ var maxWidth = window.matchMedia("(max-width: 767px)");
+ 
+ responsive(maxWidth);
+ maxWidth.addListener(responsive);</script>
 </body>
 
 </html>
