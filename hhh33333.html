@@ -11,6 +11,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
 
@@ -20,6 +26,7 @@
             gap: 2rem;
         }
 
+        
         .list-view {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -40,7 +47,7 @@
         .height2{height: 100%;}
         .final2{display: flex;}
         .gayab2{display: none;}
-        .adu2{display: flex; justify-content:space-between}
+        .adu2{display: flex; justify-content:space-around}
         .reverse2{display: flex; flex-direction: column-reverse;}
 
 
@@ -58,9 +65,29 @@
             }
 
         }
-
-
         @media (min-width: 768px) {
+            .gridmy {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .listmy {
+                display: grid;
+                grid-template-columns: 1fr;
+                /* grid-template-columns: repeat(1, minmax(25rem, 1fr) ); */
+            }
+
+        }
+        @media (max-width: 1200px) {
+            .adu2{ justify-content:center}
+            
+
+        }
+
+
+
+        @media (min-width: 1200px) {
             .gridmy {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -72,6 +99,7 @@
                 grid-template-columns: 1fr;
                 /* grid-template-columns: repeat(1, minmax(25rem, 1fr) ); */
             }
+            .margin{margin-top: 30px;}
         }
     </style>
 </head>
@@ -93,9 +121,9 @@
 
 
                 <div class="final">
-                    <div class="card">
+                    <div class="card border-0">
                         <div class="card height">
-                            <img src="images/CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png"
+                            <img src="images/Grow-Trees-On-the-path-to-environment-sustainability-1.png"
                                 class="card-img-top height" alt="...">
                             <div class="card-img-overlay">
                                 <div
@@ -106,19 +134,20 @@
                                     </div>
                                     <div class="like-group d-flex flex-column justify-content-between">
                                         <div class="bg-dark p-1 rounded-pill">
-                                            <img src="images//heart.png" alt="">
+                                            <img src="images/heart.png" alt="">
                                         </div>
                                         <div class="bg-dark p-1 rounded-pill">
-                                            <img src="images/L0001.png" alt="">
+                                            <img src="images/heart1.png" alt="">
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
-                        <!-- <span class="fw-lighter bg-light rounded-pill text-center fw-lighter w-50 align-self-center"
-                            style="margin-top: -10px; z-index: 5;">Environment</span> -->
+                        <span class="fw-lighter bg-light rounded-pill text-center fw-lighter w-50 align-self-center gayab"
+                            style="margin-top: -10px; z-index: 5;">Environment</span>
                     </div>
+                    
                     <div class="card-body">
 
 
@@ -153,45 +182,119 @@
 
                         <div class=" gayab">
                             <div class="d-flex justify-content-center">
-                                <span class="rounded-pill bg-white border px-2 mt-4" style="z-index: 1;">Ongoing
-                                    Opportunity</span>
+                                <span class="rounded-pill bg-white border px-2 mt-4" style="z-index: 1;">From 10/01/2019 until 25/02/2019</span>
                             </div>
                             <hr class="" style="margin-top: -10px;">
                         </div>
 
 
-                        <div class="adu  ">
+                        <div class="  ">
 
-                            <div class="time-seats">
-                                <div class="d-flex time-seats-wrapper align-items-center justify-content-between">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div class="seats mx-2">
-                                            <img src="./CI Platform Assets/Already-volunteered.png" alt="">
+                            <!-- <div class="time-seats">
+                                <div class="d-flex  flex-wrap time-seats-wrapper align-items-center justify-content-between">
+                                    <div class="d-flex  flex-wrap justify-content-between mt-5">
+                                        <div class="d-flex align-items-bottom ">
+                                            <img src="/images/Already-volunteered.png" />
+                                            <div class="d-flex flex-column ms-2 ">
+                                                <span class="dark-gray">250</span>
+                                                <span class="light-gray fs-fourteen">Already </span>
+                                            </div>
                                         </div>
-                                        <div class="d-flex flex-column">
-                                            <span>250</span>
-                                            <span class="fw-lighter">Already volunteered</span>
+                                        <div class="d-flex align-items-center ">
+                                            <img src="/images/Seats-left.png" />
+                                            <div class="d-flex flex-column ms-2 ">
+                                                <span class="dark-gray">10</span>
+                                                <span class="light-gray fs-fourteen">Seats Left</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center ">
+                                            <img src="/images/deadline.png" />
+                                            <div class="d-flex flex-column ms-2 ">
+                                                <span class="dark-gray">09/01/2019</span>
+                                                <span class="light-gray fs-fourteen">Deadline</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img src="/images/mission.png" style="height:24px; width:24px" />
+                                            <div class="d-flex flex-column ms-2 ">
+                                                <div class="progress " role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100" style="height:8px">
+                                                    <div class="progress-bar"
+                                                        style="width: 75%;background-color: orange;"></div>
+                                                </div>
+                                                <span class="light-gray fs-fourteen mt-2">8000 achieved</span>
+                                            </div>
                                         </div>
                                     </div>
+
     
                                 </div>
-                            </div>
+                            </div> -->
     
     
                             <!-- <hr> -->
     
     
     
-                            <div class="d-flex justify-content-center mt-4" id="apply-btn">
+                            <!-- <div class="d-flex justify-content-center mt-4" id="apply-btn">
                                 <button type="submit" value="Apply" class="btn btn-outline-orange rounded-pill ps-3 pe-3"
                                     style="  border-color: #F88634;
                                     color: #F88634;">
                                     Apply
-                                    <img src="./CI Platform Assets/right-arrow.png" class="ms-2" />
+                                    <img src="./images/right-arrow.png" class="ms-2" />
                                 </button>
+                            </div> -->
+
+                            <div class="div2  flex-wrap adu">
+
+
+                                <div class="d-flex  flex-wrap justify-content-between mt-4">
+                                    <div class="d-flex align-items-center ">
+                                        <img src="/images/Already-volunteered.png" />
+                                        <div class="d-flex flex-column ms-2 ">
+                                            <span class="dark-gray">250</span>
+                                            <span class="light-gray fs-fourteen">Already volunteered</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="/images/Seats-left.png" />
+                                        <div class="d-flex flex-column ms-2 ">
+                                            <span class="dark-gray">10</span>
+                                            <span class="light-gray fs-fourteen">Seats Left</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="/images/deadline.png" />
+                                        <div class="d-flex flex-column ms-2 ">
+                                            <span class="dark-gray">09/01/2019</span>
+                                            <span class="light-gray fs-fourteen">Deadline</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <img src="/images/mission.png" style="height:24px; width:24px" />
+                                        <div class="d-flex flex-column ms-2 ">
+                                            <div class="progress " role="progressbar" aria-valuenow="75"
+                                                aria-valuemin="0" aria-valuemax="100" style="height:8px">
+                                                <div class="progress-bar"
+                                                    style="width: 75%;background-color: orange;"></div>
+                                            </div>
+                                            <span class="light-gray fs-fourteen mt-2">8000 achieved</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="d-flex justify-content-center margin" id="">
+                                    <button type="submit" value="Apply"
+                                        class="btn btn-outline-orange rounded-pill ps-3 pe-3 fw-bold" style="  border-color: #ff9800;
+                                        color: orange; max-height: 37.33px;">
+                                        Apply
+                                        <img src="/images/right-arrow.png" class="ms-2" />
+                                    </button>
+                                </div>
+    
+    
                             </div>
-
-
+    
                         </div>
 
                        
@@ -209,7 +312,7 @@
                 <div class="final">
                     <div class="card">
                         <div class="card height">
-                            <img src="images/CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png"
+                            <img src="./images/Grow-Trees-On-the-path-to-environment-sustainability-1.png"
                                 class="card-img-top height" alt="...">
                             <div class="card-img-overlay">
                                 <div
@@ -465,6 +568,9 @@
                         products_container.classList.add('listmy');
                         products_container.classList.remove('gridmy');
                         btn_active(btn);
+                        var maxWidth = window.matchMedia("(max-width: 767px)");
+            responsive(maxWidth);
+ maxWidth.addListener(responsive); 
                     } else {
                         $(".final").removeClass("final2");
                         $(".height").removeClass("height2");
@@ -474,9 +580,13 @@
                         products_container.classList.add('gridmy');
                         products_container.classList.remove('listmy');
                         btn_active(btn);
+                        var maxWidth = window.matchMedia("(max-width: 767px)");
+            responsive(maxWidth);
+ maxWidth.addListener(responsive); 
                     }
                 });
             });
+            
         }
         fetchProduct();
         
